@@ -123,6 +123,9 @@
 ;; setup java-mode
 (add-hook 'java-mode-hook (lambda () (c-set-style "java")))
 
+;; setup javascript-mode
+(setq js-indent-level 2)
+
 ;; disable linum-mode for certain major modes
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
