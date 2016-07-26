@@ -1,0 +1,3 @@
+[submodule "vim/.vim/extern-plugins/molokai"]
+	path = vim/.vim/extern-plugins/molokai
+	url = https://github.com/tomasr/molokai.git
