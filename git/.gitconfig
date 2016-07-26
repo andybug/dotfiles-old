@@ -1,0 +1,15 @@
+[color]
+	ui = auto
+
+[user]
+	name = Andrew Fields
+	email = andybug10@gmail.com
+
+[diff]
+	tool = meld
+
+[push]
+	default = simple
+
+[alias]
+	log-graph = log --graph --decorate --oneline --all
