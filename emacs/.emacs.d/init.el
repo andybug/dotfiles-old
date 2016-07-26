@@ -51,6 +51,7 @@
 (global-hl-line-mode 1)
 (hlinum-activate)
 (column-number-mode 1)
+(show-paren-mode 1)
 (smooth-scrolling-mode 1)
 
 (setq backup-inhibited t)
