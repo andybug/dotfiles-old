@@ -44,6 +44,12 @@
 (require 'rainbow-delimiters)
 (require 'smooth-scrolling)
 
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :family "mononoki")
+  ;; default font size (point * 10)
+  (set-face-attribute 'default nil :height 140)
+)
+
 (load-theme 'base16-monokai-dark t)
 (monokai-mode-line)
 
