@@ -1,3 +1,6 @@
 [submodule "vim/.vim/extern-plugins/molokai"]
 	path = vim/.vim/extern-plugins/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "fish/.local/share/omf"]
+	path = fish/.local/share/omf
+	url = https://github.com/oh-my-fish/oh-my-fish.git
