@@ -27,7 +27,7 @@
 (setq evil-magit-state 'motion)
 
 (require 'auto-complete)
-(require 'base16-monokai-dark-theme)
+(require 'base16-monokai-theme)
 (require 'clojure-mode)
 (require 'diff-hl)
 (require 'evil)
@@ -50,7 +50,7 @@
   (set-face-attribute 'default nil :height 140)
 )
 
-(load-theme 'base16-monokai-dark t)
+(load-theme 'base16-monokai t)
 (monokai-mode-line)
 
 (global-diff-hl-mode)
