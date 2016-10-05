@@ -134,6 +134,11 @@
 ;; setup javascript-mode
 (setq js-indent-level 2)
 
+;; setup nxml-mode
+(add-hook 'nxml-mode-hook (lambda () (setq nxml-child-indent 2)))
+(add-hook 'nxml-mode-hook (lambda () (setq nxml-attribute-indent 2)))
+(add-hook 'nxml-mode-hook (lambda () (setq indent-tabs-mode nil)))
+
 ;; disable linum-mode for certain major modes
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
