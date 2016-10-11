@@ -32,6 +32,7 @@
 (require 'diff-hl)
 (require 'evil)
 (require 'evil-magit)
+(require 'exec-path-from-shell)
 (require 'fill-column-indicator)
 (require 'flx)
 (require 'flx-ido)
@@ -48,6 +49,7 @@
   (set-face-attribute 'default nil :family "mononoki")
   ;; default font size (point * 10)
   (set-face-attribute 'default nil :height 140)
+  (exec-path-from-shell-initialize)
 )
 
 (load-theme 'base16-monokai t)
