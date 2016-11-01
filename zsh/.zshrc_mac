@@ -1,5 +1,7 @@
 
 alias vim=nvim
 
+path=($HOME/bin $path)
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
