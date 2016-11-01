@@ -148,7 +148,10 @@
 		     (list 'term-mode)))
       (linum-mode 1))))
 
+;; key-chord-mode
+(setq key-chord-two-keys-delay 0.3)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-mode 1)
+
 (my-global-linum-mode 1)
-
-
 (evil-mode 1)

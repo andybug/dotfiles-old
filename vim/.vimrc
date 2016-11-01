@@ -52,6 +52,9 @@ set nobackup
 set noswapfile
 set nowritebackup
 
+" keys
+imap jj <Esc>
+
 " etc
 set lazyredraw
 set magic
