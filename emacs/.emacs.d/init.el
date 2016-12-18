@@ -32,7 +32,6 @@
 (require 'diff-hl)
 (require 'evil)
 (require 'evil-magit)
-(require 'exec-path-from-shell)
 (require 'fill-column-indicator)
 (require 'flx)
 (require 'flx-ido)
@@ -46,6 +45,7 @@
 (require 'smooth-scrolling)
 
 (when (eq system-type 'darwin)
+  (require 'exec-path-from-shell)
   (set-face-attribute 'default nil :family "mononoki")
   ;; default font size (point * 10)
   (set-face-attribute 'default nil :height 140)
