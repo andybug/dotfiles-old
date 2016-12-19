@@ -55,4 +55,4 @@ URxvt.color15:      base07
 
 ! emacs
 Emacs.FontBackend: xft
-Emacs.font: Hermit-10
+Emacs.font: Inconsolata-10

@@ -38,6 +38,7 @@
 (require 'flycheck)
 (require 'hlinum)
 (require 'indent-guide)
+(require 'key-chord)
 (require 'magit)
 (require 'monokai-mode-line)
 (require 'powerline)
