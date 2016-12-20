@@ -130,9 +130,9 @@
 (add-hook 'clojure-mode-hook '(lambda () (modify-syntax-entry ?- "w")))
 
 ;; setup java-mode
-(add-hook 'java-mode-hook (lambda () (c-set-style "java")))
-(add-hook 'java-mode-hook (lambda () (setq c-basic-offset 4)))
-(add-hook 'java-mode-hook (lambda () (setq indent-tabs-mode nil)))
+;; (add-hook 'java-mode-hook (lambda () (c-set-style "java")))
+;; (add-hook 'java-mode-hook (lambda () (setq c-basic-offset 4)))
+;; (add-hook 'java-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 ;; setup javascript-mode
 (setq js-indent-level 2)
