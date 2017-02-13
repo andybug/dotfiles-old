@@ -55,6 +55,9 @@ set nowritebackup
 " keys
 imap jj <Esc>
 
+" disable mouse
+set mouse=
+
 " etc
 set lazyredraw
 set magic
