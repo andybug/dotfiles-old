@@ -103,8 +103,11 @@
 (global-set-key (kbd "C-w 3")   'split-window-right)
 (global-set-key (kbd "C-w 4")   'split-window-right-other)
 
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(let ((custom-file-path "~/.emacs.d/custom.el"))
+  (setq custom-file (symbol-value 'custom-file-path))
+  (if (file-exists-p (symbol-value 'custom-file-path))
+    (load custom-file)
+    (message "custom file '%s' does not exist" (symbol-value 'custom-file-path))))
 
 ;; org-mode
 (setq org-log-done 'time)
