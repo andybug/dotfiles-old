@@ -4,6 +4,8 @@ alias ll='ls -l'
 alias la='ll -a'
 alias vim=nvim
 
+eval $(gdircolors $HOME/.dircolors-solarized/dircolors.256dark)
+
 path=($HOME/bin $path)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
