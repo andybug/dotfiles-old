@@ -1,3 +1,7 @@
 
-alias ls='ls -X --color=auto'
+path=('/home/andy/bin' $path)
+export PATH
+
+alias ls='ls --group-directories-first --color=auto'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source <(kubectl completion zsh)
