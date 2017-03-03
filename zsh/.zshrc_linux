@@ -3,5 +3,10 @@ path=('/home/andy/bin' $path)
 export PATH
 
 alias ls='ls --group-directories-first --color=auto'
+
+# check out https://github.com/Anthony25/gnome-terminal-colors-solarized
+# for gnome-terminal
+eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
+
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source <(kubectl completion zsh)
