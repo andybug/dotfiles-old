@@ -1,6 +1,6 @@
 
-alias ls='gls --color=auto -X'
-alias ll='ls -l'
+alias ls='gls --color=auto --group-directories-first'
+alias ll='ls -lh'
 alias la='ll -a'
 alias vim=nvim
 
