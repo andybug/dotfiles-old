@@ -51,6 +51,9 @@
   ;; default font size (point * 10)
   (set-face-attribute 'default nil :height 140)
   (exec-path-from-shell-initialize)
+  ;; setup dired for mac
+  (setq insert-directory-program "/usr/local/bin/gls")
+  (setq dired-listing-switches "-al --group-directories-first")
 )
 
 (load-theme 'base16-monokai t)
