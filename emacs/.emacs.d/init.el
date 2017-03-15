@@ -115,7 +115,8 @@
 ;; org-mode
 (setq org-log-done 'time)
 (setq org-use-tag-inheritance '0)
-(setq org-todo-keywords '((type "TODO" "STARTED" "WAITING" "|" "DONE" "CANCELED")))
+(setq org-todo-keywords '((type "TODO" "STARTED" "BLOCKED" "|" "DONE" "CANCELED")))
+(setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
 (global-set-key "\C-ca" 'org-agenda)
 
 ;; use linux-style indenting by default in c-mode
@@ -159,6 +160,9 @@
 (setq key-chord-two-keys-delay 0.3)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
+
+;; diff-hl
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 (my-global-linum-mode 1)
 (evil-mode 1)
