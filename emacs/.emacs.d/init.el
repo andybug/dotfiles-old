@@ -54,6 +54,7 @@
   ;; setup dired for mac
   (setq insert-directory-program "/usr/local/bin/gls")
   (setq dired-listing-switches "-al --group-directories-first")
+  (setq org-directory "~/Documents/org")
 )
 
 (load-theme 'base16-monokai t)
@@ -130,10 +131,17 @@
     (message "custom file '%s' does not exist" (symbol-value 'custom-file-path))))
 
 ;; org-mode
+(setq org-default-notes-file (format "%s/notes.org" org-directory))
 (setq org-log-done 'time)
 (setq org-use-tag-inheritance '0)
 (setq org-todo-keywords '((type "TODO" "STARTED" "BLOCKED" "|" "DONE" "CANCELED")))
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
+
+(setq org-capture-templates
+      (quote (("t" "todo" entry (file+headline org-default-notes-file "Tasks")
+	       "* TODO %?\nCreated: %U\n%a")
+	      ("n" "note" entry (file+datetree org-default-notes-file)
+	       "* %?\nCreated: %U\n%a"))))
 
 ;; use linux-style indenting by default in c-mode
 (setq c-default-style "linux")
