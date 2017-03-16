@@ -84,14 +84,31 @@
   (split-window-right)
   (other-window 1))
 
+;; jump to the file at the top of the org-agenda-files list
+(defun switch-to-top-org-agenda-file ()
+  (interactive)
+  (let ((agenda-file (car org-agenda-files)))
+    (if agenda-file
+	(let ((buffer (get-file-buffer agenda-file)))
+	  (if buffer
+	      (switch-to-buffer buffer)
+	    (message (format "could not find %s" agenda-file))))
+      (message "no agenda file"))))
+
+
 (global-unset-key (kbd "C-x C-c")) ;; close
 (global-unset-key (kbd "C-x C-d")) ;; list directory
 (global-unset-key (kbd "C-x d"))   ;; dired
 (global-unset-key (kbd "C-w"))     ;; kill-region
 
+;; global key bindings
 (global-set-key (kbd "C-x C-d") 'dired)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
-(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
 
 (windmove-default-keybindings)
 (global-set-key (kbd "C-w h")   'windmove-left)
@@ -117,7 +134,6 @@
 (setq org-use-tag-inheritance '0)
 (setq org-todo-keywords '((type "TODO" "STARTED" "BLOCKED" "|" "DONE" "CANCELED")))
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
-(global-set-key "\C-ca" 'org-agenda)
 
 ;; use linux-style indenting by default in c-mode
 (setq c-default-style "linux")
