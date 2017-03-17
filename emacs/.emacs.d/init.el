@@ -127,6 +127,11 @@
 	    (message (format "could not find %s" agenda-file))))
       (message "no agenda file"))))
 
+;; jump to the notes file; open it if not already
+(defun switch-to-org-notes-file ()
+  (interactive)
+  (find-file org-default-notes-file))
+
 
 (global-unset-key (kbd "C-x C-c")) ;; close
 (global-unset-key (kbd "C-x C-d")) ;; list directory
@@ -141,6 +146,7 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
+(global-set-key (kbd "C-c n") 'switch-to-org-notes-file)
 
 (windmove-default-keybindings)
 (global-set-key (kbd "C-w h")   'windmove-left)
