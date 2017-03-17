@@ -177,9 +177,9 @@
 
 (setq org-capture-templates
       (quote (("t" "todo" entry (file+headline org-default-notes-file "Tasks")
-	       "* TODO %?\nCreated: %U\n%a")
+	       "* TODO %?\n  Created: %U\n")
 	      ("n" "note" entry (file+datetree org-default-notes-file)
-	       "* %?\nCreated: %U\n%a"))))
+	       "* %?\n  Created: %U\n"))))
 
 ;; use linux-style indenting by default in c-mode
 (setq c-default-style "linux")
