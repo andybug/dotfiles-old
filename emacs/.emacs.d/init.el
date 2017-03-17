@@ -1,4 +1,5 @@
-;; initial emacs configuration
+;; initial emacs configuration  -*- indent-tabs-mode: nil; -*-
+
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -7,44 +8,44 @@
 (setq initial-major-mode 'text-mode)
 (setq initial-scratch-message "\
 
-				     `.--:-`
-				-:-++/-...-+o+-
-			     ..oyo-       `/o+-
-			    /yy:-         :yy/
-			  `-ys`    `:/:-://h/-.
-			 `os.`  `/+:.::.` :/+ody:
-			  o:  `++`-///o       `:+o.`
-			  s  :o/+o+oyy/            `...`
-		     .:///+`+syssdyy:oy+`      ```   `.-`
-		.:+oso+:::.`+h:`h:ss` s+s.              ..
-	     -+so/-.``-:o/`-s/``/y-:osh+.                `-.`
-	  -+s+-` .-+oo+//s -ho` `/s+:-`                    `:.
-	:o++:..---.`    o- `h//::`             `  ````````:-`
+                                     `.--:-`
+                                -:-++/-...-+o+-
+                             ..oyo-       `/o+-
+                            /yy:-         :yy/
+                          `-ys`    `:/:-://h/-.
+                         `os.`  `/+:.::.` :/+ody:
+                          o:  `++`-///o       `:+o.`
+                          s  :o/+o+oyy/            `...`
+                     .:///+`+syssdyy:oy+`      ```   `.-`
+                .:+oso+:::.`+h:`h:ss` s+s.              ..
+             -+so/-.``-:o/`-s/``/y-:osh+.                `-.`
+          -+s+-` .-+oo+//s -ho` `/s+:-`                    `:.
+        :o++:..---.`    o- `h//::`             `  ````````:-`
       :o+o-``          `y   -o       ``````             --`
      +y+-              :+    :o://///:::-::/+:`      .:-`
-		       y`      ``           /o`-----:+`
-		      :+                     s+
-		     `y`                    `+dy`
-		     s-                      `hdd/
-		    :s     `                   oo
-		   `y:     `                --  h.
-		   +y.                      .ho h`
-		  `s:   `                    .hyy
-		  ++    `                  `` .h`
-		 -y:    `                   /: d`
-		 +o                         .d+h
-		.d/-.``-```.-               /mh:
-		  .-//+/++/:h-              -ds
-			    s:              .d`
-			    o/              ++
+                       y`      ``           /o`-----:+`
+                      :+                     s+
+                     `y`                    `+dy`
+                     s-                      `hdd/
+                    :s     `                   oo
+                   `y:     `                --  h.
+                   +y.                      .ho h`
+                  `s:   `                    .hyy
+                  ++    `                  `` .h`
+                 -y:    `                   /: d`
+                 +o                         .d+h
+                .d/-.``-```.-               /mh:
+                  .-//+/++/:h-              -ds
+                            s:              .d`
+                            o/              ++
 
-			     _|            _|
+                             _|            _|
      _|_|_|  _|_|_|      _|_|_|  _|    _|  _|_|_|    _|    _|    _|_|_|
    _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|
    _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|
      _|_|_|  _|    _|    _|_|_|    _|_|_|  _|_|_|      _|_|_|    _|_|_|
-				       _|                            _|
-				   _|_|                          _|_|
+                                       _|                            _|
+                                   _|_|                          _|_|
 ")
 
 (require 'package)
@@ -121,10 +122,10 @@
   (interactive)
   (let ((agenda-file (car org-agenda-files)))
     (if agenda-file
-	(let ((buffer (get-file-buffer agenda-file)))
-	  (if buffer
-	      (switch-to-buffer buffer)
-	    (message (format "could not find %s" agenda-file))))
+        (let ((buffer (get-file-buffer agenda-file)))
+          (if buffer
+              (switch-to-buffer buffer)
+            (message (format "could not find %s" agenda-file))))
       (message "no agenda file"))))
 
 ;; jump to the notes file; open it if not already
@@ -139,14 +140,15 @@
 (global-unset-key (kbd "C-w"))     ;; kill-region
 
 ;; global key bindings
-(global-set-key (kbd "C-x C-d") 'dired)
-(global-set-key (kbd "C-x C-b") 'buffer-menu)
-(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c W") 'whitespace-cleanup)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c w") 'whitespace-mode)
-(global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
+(global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c n") 'switch-to-org-notes-file)
+(global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
+(global-set-key (kbd "C-x C-d") 'dired)
 
 (windmove-default-keybindings)
 (global-set-key (kbd "C-w h")   'windmove-left)
@@ -177,9 +179,9 @@
 
 (setq org-capture-templates
       (quote (("t" "todo" entry (file+headline org-default-notes-file "Tasks")
-	       "* TODO %?\n  Created: %U\n")
-	      ("n" "note" entry (file+datetree org-default-notes-file)
-	       "* %?\n  Created: %U\n"))))
+               "* TODO %?\n  Created: %U\n")
+              ("n" "note" entry (file+datetree org-default-notes-file)
+               "* %?\n  Created: %U\n"))))
 
 ;; use linux-style indenting by default in c-mode
 (setq c-default-style "linux")
@@ -215,7 +217,7 @@
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
     (when (not (memq major-mode
-		     (list 'term-mode)))
+                     (list 'term-mode)))
       (linum-mode 1))))
 
 ;; key-chord-mode
