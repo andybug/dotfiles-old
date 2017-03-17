@@ -86,7 +86,6 @@
   ;; setup dired for mac
   (setq insert-directory-program "/usr/local/bin/gls")
   (setq dired-listing-switches "-al --group-directories-first")
-  (setq org-directory "~/Documents/org")
 )
 
 (load-theme 'base16-monokai t)
@@ -163,6 +162,7 @@
     (message "custom file '%s' does not exist" (symbol-value 'custom-file-path))))
 
 ;; org-mode
+(setq org-directory "~/Documents/org")
 (setq org-default-notes-file (format "%s/notes.org" org-directory))
 (setq org-log-done 'time)
 (setq org-use-tag-inheritance '0)
