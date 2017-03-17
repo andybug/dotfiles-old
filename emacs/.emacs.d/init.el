@@ -133,6 +133,15 @@
   (interactive)
   (find-file org-default-notes-file))
 
+;; jump to andybug-term; create if it doesn't exist
+(defun switch-to-andybug-term ()
+  (interactive)
+  ;;(require 'term)
+  (let ((buffer (get-buffer "*andybug-term*")))
+    (if buffer
+        (switch-to-buffer buffer)
+      (ansi-term "/bin/zsh" "andybug-term"))))
+
 
 (global-unset-key (kbd "C-x C-c")) ;; close
 (global-unset-key (kbd "C-x C-d")) ;; list directory
@@ -146,6 +155,7 @@
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c n") 'switch-to-org-notes-file)
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
+(global-set-key (kbd "C-c t") 'switch-to-andybug-term)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x C-d") 'dired)
