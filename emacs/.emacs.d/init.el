@@ -225,6 +225,9 @@
 (add-hook 'nxml-mode-hook (lambda () (setq nxml-attribute-indent 2)))
 (add-hook 'nxml-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
+;; setup emacs-lisp-mode
+(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+
 ;; disable linum-mode for certain major modes
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
