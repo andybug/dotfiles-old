@@ -5,15 +5,47 @@
 (menu-bar-mode 0)
 (setq inhibit-startup-screen t)
 (setq initial-major-mode 'text-mode)
-(setq initial-scratch-message (concat "\
-#   ___ _ __ ___   __ _  ___ ___
-#  / _ \\ '_ ` _ \\ / _` |/ __/ __|
-# |  __/ | | | | | (_| | (__\\__ \\
-#  \\___|_| |_| |_|\\__,_|\\___|___/
-#
-# emacs started " (current-time-string) "
-# let's do this shit
-"))
+(setq initial-scratch-message "\
+
+				     `.--:-`
+				-:-++/-...-+o+-
+			     ..oyo-       `/o+-
+			    /yy:-         :yy/
+			  `-ys`    `:/:-://h/-.
+			 `os.`  `/+:.::.` :/+ody:
+			  o:  `++`-///o       `:+o.`
+			  s  :o/+o+oyy/            `...`
+		     .:///+`+syssdyy:oy+`      ```   `.-`
+		.:+oso+:::.`+h:`h:ss` s+s.              ..
+	     -+so/-.``-:o/`-s/``/y-:osh+.                `-.`
+	  -+s+-` .-+oo+//s -ho` `/s+:-`                    `:.
+	:o++:..---.`    o- `h//::`             `  ````````:-`
+      :o+o-``          `y   -o       ``````             --`
+     +y+-              :+    :o://///:::-::/+:`      .:-`
+		       y`      ``           /o`-----:+`
+		      :+                     s+
+		     `y`                    `+dy`
+		     s-                      `hdd/
+		    :s     `                   oo
+		   `y:     `                --  h.
+		   +y.                      .ho h`
+		  `s:   `                    .hyy
+		  ++    `                  `` .h`
+		 -y:    `                   /: d`
+		 +o                         .d+h
+		.d/-.``-```.-               /mh:
+		  .-//+/++/:h-              -ds
+			    s:              .d`
+			    o/              ++
+
+			     _|            _|
+     _|_|_|  _|_|_|      _|_|_|  _|    _|  _|_|_|    _|    _|    _|_|_|
+   _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|
+   _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|
+     _|_|_|  _|    _|    _|_|_|    _|_|_|  _|_|_|      _|_|_|    _|_|_|
+				       _|                            _|
+				   _|_|                          _|_|
+")
 
 (require 'package)
 (add-to-list 'package-archives
