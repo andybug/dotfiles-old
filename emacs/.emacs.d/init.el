@@ -233,7 +233,7 @@
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
     (when (not (memq major-mode
-                     (list 'term-mode)))
+                     (list 'term-mode 'org-mode)))
       (linum-mode 1))))
 
 ;; key-chord-mode
