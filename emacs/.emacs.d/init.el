@@ -125,7 +125,7 @@
         (let ((buffer (get-file-buffer agenda-file)))
           (if buffer
               (switch-to-buffer buffer)
-            (message (format "could not find %s" agenda-file))))
+            (find-file agenda-file)))
       (message "no agenda file"))))
 
 ;; jump to the notes file; open it if not already
