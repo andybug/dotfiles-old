@@ -185,6 +185,7 @@
 (setq org-directory "~/Documents/org")
 (setq org-default-notes-file (format "%s/notes.org" org-directory))
 (setq org-log-done 'time)
+(setq org-agenda-skip-scheduled-if-done t)
 (setq org-use-tag-inheritance '0)
 (setq org-todo-keywords '((type "TODO" "STARTED" "BLOCKED" "|" "DONE" "CANCELED")))
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
