@@ -130,11 +130,6 @@
             (find-file agenda-file)))
       (message "no agenda file"))))
 
-;; jump to the notes file; open it if not already
-(defun switch-to-org-notes-file ()
-  (interactive)
-  (find-file org-default-notes-file))
-
 ;; jump to andybug-term; create if it doesn't exist
 (defun switch-to-andybug-term ()
   (interactive)
@@ -158,7 +153,7 @@
 (global-set-key (kbd "C-c f") 'find-dired)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c n") 'switch-to-org-notes-file)
+(global-set-key (kbd "C-c n") (lambda () (interactive) (find-file org-default-notes-file)))
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
 (global-set-key (kbd "C-c r") 'rgrep)
 (global-set-key (kbd "C-c t") 'switch-to-andybug-term)
