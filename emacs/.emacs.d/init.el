@@ -187,6 +187,7 @@
 ;; org-mode
 (setq org-directory "~/Documents/org")
 (setq org-default-notes-file (format "%s/notes.org" org-directory))
+(setq org-agenda-files (list (symbol-value 'org-default-notes-file)))
 (setq org-log-done 'time)
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-use-tag-inheritance '0)
