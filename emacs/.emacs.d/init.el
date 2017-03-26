@@ -64,6 +64,7 @@
 (require 'clojure-mode)
 (require 'diff-hl)
 (require 'evil)
+(require 'evil-lion)
 (require 'evil-magit)
 (require 'fill-column-indicator)
 (require 'flx)
@@ -98,6 +99,7 @@
 (column-number-mode 1)
 (show-paren-mode 1)
 (smooth-scrolling-mode 1)
+(evil-lion-mode)
 
 (setq backup-inhibited t)
 (setq auto-save-default nil)
