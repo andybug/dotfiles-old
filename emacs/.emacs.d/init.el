@@ -148,6 +148,7 @@
 
 ;; global key bindings
 (global-set-key (kbd "C-c I") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c O") 'occur)
 (global-set-key (kbd "C-c W") 'whitespace-cleanup)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
