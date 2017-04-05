@@ -108,6 +108,7 @@
 (ido-everywhere 1)
 (flx-ido-mode 1)
 
+(setq ido-auto-merge-work-directories-length -1)
 (setq-default fill-column 80)
 (setq diff-switches '("-u"))
 
