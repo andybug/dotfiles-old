@@ -153,6 +153,7 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c f") 'find-dired)
 (global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c j") 'org-clock-goto)
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c n") (lambda () (interactive) (find-file org-default-notes-file)))
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
