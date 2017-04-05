@@ -148,7 +148,7 @@
 
 ;; global key bindings
 (global-set-key (kbd "C-c I") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
-(global-set-key (kbd "C-c O") 'occur)
+(global-set-key (kbd "C-c O") 'org-clock-out)
 (global-set-key (kbd "C-c W") 'whitespace-cleanup)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
@@ -159,6 +159,7 @@
 (global-set-key (kbd "C-c n") (lambda () (interactive) (find-file org-default-notes-file)))
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
 (global-set-key (kbd "C-c r") 'rgrep)
+(global-set-key (kbd "C-c s") 'occur)
 (global-set-key (kbd "C-c t") 'switch-to-andybug-term)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
