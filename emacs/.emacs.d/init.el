@@ -87,7 +87,6 @@
   (exec-path-from-shell-initialize)
   ;; setup dired for mac
   (setq insert-directory-program "/usr/local/bin/gls")
-  (setq dired-listing-switches "-al --group-directories-first")
 )
 
 (load-theme 'base16-monokai t)
@@ -111,6 +110,7 @@
 (setq ido-auto-merge-work-directories-length -1)
 (setq-default fill-column 80)
 (setq diff-switches '("-u"))
+(setq dired-listing-switches "-al --group-directories-first")
 
 (put 'erase-buffer 'disabled nil)
 
