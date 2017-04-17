@@ -144,7 +144,7 @@
 (defun andybug-show-timer-menu ()
   (interactive)
   (let*
-      ((choices '("start" "stop" "pause" "countdown"))
+      ((choices '("start" "stop" "pause"))
        (choice (ido-completing-read "selection: " choices nil t)))
     (cond
      ((string= choice "start") (org-timer-start))
