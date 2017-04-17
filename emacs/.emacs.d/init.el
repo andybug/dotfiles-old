@@ -140,6 +140,17 @@
         (switch-to-buffer buffer)
       (ansi-term "/bin/zsh" "andybug-term"))))
 
+;; put all of the timer functions in one place
+(defun andybug-show-timer-menu ()
+  (interactive)
+  (let*
+      ((choices '("start" "stop" "pause" "countdown"))
+       (choice (ido-completing-read "selection: " choices nil t)))
+    (cond
+     ((string= choice "start") (org-timer-start))
+     ((string= choice "stop") (org-timer-stop))
+     ((string= choice "pause") (org-timer-pause-or-continue)))))
+
 
 (global-unset-key (kbd "C-x C-c")) ;; close
 (global-unset-key (kbd "C-x C-d")) ;; list directory
@@ -160,7 +171,7 @@
 (global-set-key (kbd "C-c o") 'switch-to-top-org-agenda-file)
 (global-set-key (kbd "C-c r") 'rgrep)
 (global-set-key (kbd "C-c s") 'occur)
-(global-set-key (kbd "C-c t") 'switch-to-andybug-term)
+(global-set-key (kbd "C-c t") 'andybug-show-timer-menu)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x C-d") 'dired)
