@@ -202,7 +202,7 @@
 (setq org-log-done 'time)
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-use-tag-inheritance '0)
-(setq org-todo-keywords '((type "TODO" "PROG" "WAIT" "|" "DONE" "SKIP")))
+(setq org-todo-keywords '((type "TODO" "DOING" "WAIT" "|" "DONE" "SKIP")))
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
 (setq org-enforce-todo-dependencies t)
 
