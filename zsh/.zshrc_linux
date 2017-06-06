@@ -1,5 +1,6 @@
 
 path=('/home/andy/bin' $path)
+path=('/home/andy/.bin' $path)
 export PATH
 
 alias ls='ls --group-directories-first --color=auto'
