@@ -37,10 +37,37 @@ def dryrun(excludes):
     command.append('s3://andybug')
 
     cp = subprocess.run(command, stdout=subprocess.PIPE)
-    for line in cp.stdout.splitlines():
-        print(str(line))
+    for line in cp.stdout.decode('UTF-8').splitlines():
+        print(line)
+
+def sync(excludes):
+    command = ['aws', 's3', 'sync', '--delete']
+    for exclude in excludes:
+        command.append('--exclude')
+        command.append(exclude)
+    command.append(os.getcwd())
+    command.append('s3://andybug')
+
+    cp = subprocess.run(command, stdout=subprocess.PIPE)
+    for line in cp.stdout.decode('UTF-8').splitlines():
+        print(line)
+
+def prompt():
+    while True:
+        choice = input('Sync? [Y/n/q] > ')
+        if choice == 'Y' or choice == 'yes':
+            return True
+        elif choice == 'n' or choice == 'no':
+            return False
+        elif choice == 'q' or choice == 'quit':
+            exit(0)
+        else:
+            print('invalid selection')
 
 if __name__ == '__main__':
     parse_config()
     excludes = get_excludes()
     dryrun(excludes)
+    choice = prompt()
+    if choice == True:
+        sync(excludes)
