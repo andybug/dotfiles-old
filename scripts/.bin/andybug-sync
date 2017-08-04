@@ -34,7 +34,7 @@ def dryrun(excludes):
         command.append('--exclude')
         command.append(exclude)
     command.append(os.getcwd())
-    command.append('s3://andybug')
+    command.append('s3://{}'.format(s3_bucket))
 
     cp = subprocess.run(command, stdout=subprocess.PIPE)
     for line in cp.stdout.decode('UTF-8').splitlines():
@@ -46,7 +46,7 @@ def sync(excludes):
         command.append('--exclude')
         command.append(exclude)
     command.append(os.getcwd())
-    command.append('s3://andybug')
+    command.append('s3://{}'.format(s3_bucket))
 
     cp = subprocess.run(command, stdout=subprocess.PIPE)
     for line in cp.stdout.decode('UTF-8').splitlines():
