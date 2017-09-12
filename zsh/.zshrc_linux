@@ -10,4 +10,4 @@ alias ls='ls --group-directories-first --color=auto'
 eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)

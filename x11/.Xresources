@@ -1,5 +1,5 @@
 URxvt.scrollBar: false
-URxvt.font: xft:GohuFont:size=11
+URxvt.font: xft:Mononoki:size=11
 URxvt.letterSpace: 1
 URxvt.imLocale: en_US.UTF-8
 
