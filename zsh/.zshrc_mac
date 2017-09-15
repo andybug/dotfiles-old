@@ -9,5 +9,7 @@ eval $(gdircolors $HOME/.dircolors-solarized/dircolors.256dark)
 path=($HOME/bin $path)
 path=($HOME/.bin $path)
 
+export GPG_TTY=$(tty)
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
