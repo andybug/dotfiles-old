@@ -4,5 +4,10 @@ Use stow.
 ## weechat
 Add login for each server like so:
 
-    /set irc.server.freenode.sasl_password "xxxxxxx"
+    /secure passphrase xxxxxx
+    /secure set freenode_password xxxxxxx
+
+Which is referenced in `irc.conf` as:
+
+    freenode.sasl_password = "${sec.data.freenode_password}"
 
