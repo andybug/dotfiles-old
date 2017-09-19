@@ -243,6 +243,9 @@
 ;; setup emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
+;; setup rust-mode
+(add-hook 'rust-mode-hook '(lambda () (modify-syntax-entry ?_ "w")))
+
 ;; disable linum-mode for certain major modes
 (define-global-minor-mode my-global-linum-mode linum-mode
   (lambda ()
