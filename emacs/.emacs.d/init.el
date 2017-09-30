@@ -213,6 +213,9 @@
 ;; use linux-style indenting by default in c-mode
 (setq c-default-style "linux")
 
+;; auto-refresh dired on fs changes
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 ;; treat _ as word char in c-mode and python-mode
 (add-hook 'c-mode-common-hook '(lambda () (modify-syntax-entry ?_ "w")))
 (add-hook 'python-mode-hook '(lambda () (modify-syntax-entry ?_ "w")))
