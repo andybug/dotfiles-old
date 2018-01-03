@@ -9,5 +9,5 @@ alias ls='ls --group-directories-first --color=auto'
 # for gnome-terminal
 eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source <(kubectl completion zsh)

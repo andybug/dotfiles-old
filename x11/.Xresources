@@ -55,4 +55,4 @@ URxvt.color15:      base07
 
 ! emacs
 Emacs.FontBackend: xft
-Emacs.font: Mononoki-12
+Emacs.font: Hack-10
