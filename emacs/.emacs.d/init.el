@@ -203,6 +203,9 @@
 (setq org-todo-keywords '((type "TODO" "DOING" "WAIT" "|" "DONE" "SKIP")))
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimate){:} %10CLOCKSUM(Actual)")
 (setq org-enforce-todo-dependencies t)
+(setq org-agenda-start-day "-1d")
+(setq org-agenda-span 16)
+(setq org-agenda-start-on-weekday nil)
 
 (setq org-capture-templates
       (quote (("t" "todo" entry (file+headline org-default-notes-file "Tasks")
