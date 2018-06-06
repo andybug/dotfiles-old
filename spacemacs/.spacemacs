@@ -312,14 +312,26 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-; get PATH from .zshrc
+;; get PATH from .zshrc
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-; 'jj' exits insert mode
+;; 'jj' exits insert mode
 (setq key-chord-two-keys-delay 0.3)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
+
+;; fix for M-RET not working in org-mode
+;; see https://github.com/syl20bnr/spacemacs/issues/9603
+(add-hook 'org-mode-hook (lambda()
+                           (define-key
+                             evil-normal-state-local-map
+                             (kbd "M-RET")
+                             #'org-meta-return)
+                           (define-key
+                             evil-insert-state-local-map
+                             (kbd "M-RET")
+                             #'org-meta-return)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
